@@ -4,7 +4,7 @@
 <xacro:include filename="$(find polar_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find polar_description)/urdf/polar.trans" />
 <xacro:include filename="$(find polar_description)/urdf/polar.gazebo" />
-<link name="base_link">
+<link name="link0">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.01992710174774274 -0.01273333211657415 0.0347789468710237"/>
     <mass value="12.107809396130447"/>
@@ -13,19 +13,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/base_link.stl"/>
+      <mesh filename="package://polar_description/meshes/link0.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/base_link.stl"/>
+      <mesh filename="package://polar_description/meshes/link0.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link1_1">
+<link name="link1">
   <inertial>
     <origin rpy="0 0 0" xyz="-1.6825099541708434e-14 4.465852565815112e-16 0.055458709669444176"/>
     <mass value="1.5986943822482351"/>
@@ -34,19 +34,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.074"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link1_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link1.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.074"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link1_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link1.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link2_1">
+<link name="link2">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.23760561696805627 -0.04450676420501778 -0.00931281775516693"/>
     <mass value="44.86840241964558"/>
@@ -55,19 +55,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0 -0.0445 -0.199"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link2_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link2.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 -0.0445 -0.199"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link2_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link2.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link3_1">
+<link name="link3">
   <inertial>
     <origin rpy="0 0 0" xyz="0.24362268143665552 -0.04449984885133712 0.10493957750878924"/>
     <mass value="6.3335014493386375"/>
@@ -76,19 +76,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.475211 -0.0445 -0.199"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link3_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link3.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.475211 -0.0445 -0.199"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link3_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link3.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link4__1">
+<link name="link4">
   <inertial>
     <origin rpy="0 0 0" xyz="0.042842589315321554 -2.654637983760643e-10 -3.42147090999223e-05"/>
     <mass value="3.6935747535742367"/>
@@ -97,19 +97,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.017457 -0.0 -0.300319"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link4__1.stl"/>
+      <mesh filename="package://polar_description/meshes/link4.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.017457 -0.0 -0.300319"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link4__1.stl"/>
+      <mesh filename="package://polar_description/meshes/link4.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link5_1">
+<link name="link5">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.002530301374962768 -0.08499999999999688 3.760152825771357e-07"/>
     <mass value="4.873419897445595"/>
@@ -118,19 +118,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.110443 -0.085 -0.300319"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link5_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link5.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.110443 -0.085 -0.300319"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link5_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link5.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link6_1">
+<link name="link6">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0054741441410522396 2.8719256139172526e-15 -3.212236136529434e-06"/>
     <mass value="0.24238249904390155"/>
@@ -139,57 +139,57 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.155443 -0.0 -0.300319"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link6_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link6.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.155443 -0.0 -0.300319"/>
     <geometry>
-      <mesh filename="package://polar_description/meshes/link6_1.stl"/>
+      <mesh filename="package://polar_description/meshes/link6.stl"/>
     </geometry>
   </collision>
 </link>
 
 <joint name="joint1" type="continuous">
   <origin rpy="0 0 0" xyz="0.0 0.0 0.074"/>
-  <parent link="base_link"/>
-  <child link="link1_1"/>
+  <parent link="link0"/>
+  <child link="link1"/>
   <axis xyz="0.0 0.0 1.0"/>
 </joint>
 
 <joint name="joint2" type="continuous">
   <origin rpy="0 0 0" xyz="-0.0 0.0445 0.125"/>
-  <parent link="link1_1"/>
-  <child link="link2_1"/>
+  <parent link="link1"/>
+  <child link="link2"/>
   <axis xyz="-0.0 1.0 -0.0"/>
 </joint>
 
 <joint name="joint3" type="continuous">
   <origin rpy="0 0 0" xyz="-0.475211 0.0 0.0"/>
-  <parent link="link2_1"/>
-  <child link="link3_1"/>
+  <parent link="link2"/>
+  <child link="link3"/>
   <axis xyz="-0.0 -1.0 0.0"/>
 </joint>
 
 <joint name="joint4" type="continuous">
   <origin rpy="0 0 0" xyz="0.457754 -0.0445 0.101319"/>
-  <parent link="link3_1"/>
-  <child link="link4__1"/>
+  <parent link="link3"/>
+  <child link="link4"/>
   <axis xyz="1.0 -0.0 -0.0"/>
 </joint>
 
 <joint name="joint5" type="continuous">
   <origin rpy="0 0 0" xyz="0.1279 0.085 0.0"/>
-  <parent link="link4__1"/>
-  <child link="link5_1"/>
+  <parent link="link4"/>
+  <child link="link5"/>
   <axis xyz="0.0 -1.0 -0.0"/>
 </joint>
 
 <joint name="joint6" type="continuous">
   <origin rpy="0 0 0" xyz="0.045 -0.085 0.0"/>
-  <parent link="link5_1"/>
-  <child link="link6_1"/>
+  <parent link="link5"/>
+  <child link="link6"/>
   <axis xyz="1.0 0.0 -0.0"/>
 </joint>
 
