@@ -15,13 +15,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link0.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link0.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link0.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link0.dae"/>
         </geometry>
       </collision>
     </link>
@@ -30,13 +30,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.074"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link1.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link1.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.074"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link1.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link1.dae"/>
         </geometry>
       </collision>
     </link>
@@ -52,13 +52,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0.0 -0.0445 -0.199"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link2.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link2.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0.0 -0.0445 -0.199"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link2.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link2.dae"/>
         </geometry>
       </collision>
     </link>
@@ -74,13 +74,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0.475211 -0.0445 -0.199"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link3.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link3.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0.475211 -0.0445 -0.199"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link3.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link3.dae"/>
         </geometry>
       </collision>
     </link>
@@ -96,13 +96,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0.017457 -0.0 -0.300319"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link4.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link4.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0.017457 -0.0 -0.300319"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link4.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link4.dae"/>
         </geometry>
       </collision>
     </link>
@@ -118,13 +118,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="-0.110443 -0.085 -0.300319"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link5.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link5.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="-0.110443 -0.085 -0.300319"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link5.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link5.dae"/>
         </geometry>
       </collision>
     </link>
@@ -140,13 +140,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="-0.155443 -0.0 -0.300319"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link6.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link6.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="-0.155443 -0.0 -0.300319"/>
         <geometry>
-          <mesh filename="package://${description_pkg}/meshes/link6.stl"/>
+          <mesh filename="package://${description_pkg}/meshes/link6.dae"/>
         </geometry>
       </collision>
     </link>
