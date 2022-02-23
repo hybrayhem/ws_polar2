@@ -17,6 +17,13 @@
     <xacro:property name="safety_k_velocity" value="40.0"/>
     <xacro:property name="safety_pos_margin" value="0.0"/>
 
+    <link name="world" />
+    <joint name="robot_to_world" type="fixed">
+      <parent link="world" />
+      <child link="${arm_id}_link0" />
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    </joint>
+
     <link name="${arm_id}_link0">
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
