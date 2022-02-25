@@ -4,9 +4,9 @@
   <!-- arm_id: Namespace of the polar arm. Serves to differentiate between arms in case of multiple instances. -->
   <xacro:macro name="polar_arm" params="arm_id:='polar' description_pkg:='polar_description' connected_to:='' xyz:='0 0 0' rpy:='0 0 0'">
     <xacro:unless value="${not connected_to}">
-      <joint name="${arm_id}_joint_${connected_to}" type="fixed">
-        <parent link="${connected_to}"/>
-        <child link="${arm_id}_link0"/>
+      <joint name="virtual_joint" type="fixed">
+        <parent link="${connected_to}"/> <!-- world -->
+        <child link="${arm_id}_link0"/> <!-- base link -->
         <origin rpy="${rpy}" xyz="${xyz}"/>
       </joint>
     </xacro:unless>
@@ -16,13 +16,6 @@
     <xacro:property name="safety_k_position" value="100.0"/>
     <xacro:property name="safety_k_velocity" value="40.0"/>
     <xacro:property name="safety_pos_margin" value="0.0"/>
-
-    <link name="world" />
-    <joint name="robot_to_world" type="fixed">
-      <parent link="world" />
-      <child link="${arm_id}_link0" />
-      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
-    </joint>
 
     <link name="${arm_id}_link0">
       <visual>

@@ -7,7 +7,8 @@
   <xacro:include filename="$(find polar_description)/robots/polar.gazebo.xacro"/>
   <xacro:include filename="$(find polar_description)/robots/polar.transmission.xacro"/>
 
-  <xacro:polar_arm/>
+  <link name="world" />
+  <xacro:polar_arm xyz="0 0 0" rpy="0 0 0" connected_to="world"/>
    <!-- Gripper description will be implemented -->
   <!-- <xacro:hand ns="polar" connected_to="polar_link6"/> -->
 
