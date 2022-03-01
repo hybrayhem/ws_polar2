@@ -11,8 +11,8 @@ jog_frame_node:
   group_names:
     - polar_arm
   link_names:
-    - polar_hand
-#polar_link6
+#    - polar_hand
+    - polar_link6
 
 # Somehow, UR5 moveit doesn't have controller name, so specify here
 move_group:
