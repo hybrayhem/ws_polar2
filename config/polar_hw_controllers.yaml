@@ -14,7 +14,7 @@ hardware_interface:
       - polar_joint4
       - polar_joint5
       - polar_joint6
-      - polar_hand_joint1
+      # - polar_hand_joint1
 
 
 # Publish all joint states ----------------------------------
@@ -48,17 +48,17 @@ polar_arm_controller:
    state_publish_rate:  25
    action_monitor_rate: 10
 
-polar_hand_controller:
-   type: position_controllers/JointTrajectoryController
-   joints:
-      - polar_hand_joint1
-   # constraints:
-   #     goal_time: 0.6
-   #     stopped_velocity_tolerance: 0.05
-   #     polar_hand_joint1: {trajectory: 0.1, goal: 0.1}
-   # stop_trajectory_duration: 0.5
-   state_publish_rate:  25
-   action_monitor_rate: 10
+# polar_hand_controller:
+#    type: position_controllers/JointTrajectoryController
+#    joints:
+#       - polar_hand_joint1
+#    # constraints:
+#    #     goal_time: 0.6
+#    #     stopped_velocity_tolerance: 0.05
+#    #     polar_hand_joint1: {trajectory: 0.1, goal: 0.1}
+#    # stop_trajectory_duration: 0.5
+#    state_publish_rate:  25
+#    action_monitor_rate: 10
 
 joint_group_position_controller:
   type: position_controllers/JointGroupPositionController

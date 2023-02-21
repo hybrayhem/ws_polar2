@@ -1,4 +1,4 @@
-# This message holds state/command data of following joints: 
+# This message holds state/command data of following joint motors: 
 #   - polar_joint1
 #   - polar_joint2
 #   - polar_joint3
