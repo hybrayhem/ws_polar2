@@ -45,13 +45,18 @@ public:
   virtual void enforceLimits(ros::Duration& period);
 
 protected:
+  long map(float x, float in_min, float in_max, float out_min, float out_max);
+  void feedbackCallback(const polar_control::PolarCommand);
+
   serial::Serial ser;
   ros::Publisher state_pub;
+  ros::Subscriber state_sub;
+  polar_control::PolarCommand encoderFeedback;
   
   // offsets for changing home position and adapt embedded side
-  float joint2_offset;
-  float joint3_offset;
-  float joint5_offset;
+  // float joint2_offset;
+  // float joint3_offset;
+  // float joint5_offset;
 };  // class
 
 }  // namespace ros_control_boilerplate

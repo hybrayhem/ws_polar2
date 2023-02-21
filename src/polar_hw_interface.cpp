@@ -1,75 +1,49 @@
 #include <polar_control/polar_hw_interface.h>
+#include <iostream>
 
 namespace polar_control_ns
 {
+
 PolarHWInterface::PolarHWInterface(ros::NodeHandle& nh, urdf::Model* urdf_model)
   : ros_control_boilerplate::GenericHWInterface(nh, urdf_model)
 {
-  joint2_offset = 0.3813; // -
-  joint3_offset = -0.3951; // +
-  joint5_offset = 0;//-0.3333; // -
 
-  state_pub = nh.advertise<polar_control::PolarCommand>("/polar_control/write", 1);
+  // state_sub = nh.subscribe("/roboclaw/feedback", 1000, feedbackCallback);
+  state_pub = nh.advertise<polar_control::PolarCommand>("/roboclaw/command", 1);
   ROS_INFO("PolarHWInterface constructed.");
+}
+
+void PolarHWInterface::feedbackCallback(const polar_control::PolarCommand polarCommand)
+{
+  std::cout << "feedbackCallback: ";
+  for(int i = 0; i < num_joints_; i++){
+    encoderFeedback.position[i] = polarCommand.position[i]; // assign read data to moveit joint_position_
+    std::cout << encoderFeedback.position[i] << " ";
+  }
+  std::cout << "\n\n";
+}
+
+long PolarHWInterface::map(float x, float in_min, float in_max, float out_min, float out_max) {
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 void PolarHWInterface::init()
 {
-  // Call parent class version of this function
-  GenericHWInterface::init();
-  for(int i = 0; i < 3; i++){
-    try
-    {
-        ser.setPort("/dev/ttyACM0");
-        ser.setBaudrate(115200);
-        serial::Timeout to = serial::Timeout::simpleTimeout(10);
-        ser.setTimeout(to);
-        ser.open();
-    }
-    catch (serial::IOException &e)
-    {
-        ROS_ERROR_STREAM("Unable to open port ");
-        continue;
-    }
-
-    if (ser.isOpen())
-    {
-        ROS_INFO_STREAM("Serial Port initialized");
-        break;
-    }
-    else
-    {
-        ROS_INFO_STREAM("Serial Port not active");
-    }
-  }
-
-  char str[98];
-  uint8_t junk = '5';
-  ser.write((uint8_t *)&junk, 1);
-
   ROS_INFO("PolarHWInterface initialized.");
 }
 
 void PolarHWInterface::read(ros::Duration& elapsed_time)
-{
-  // printf("\nread\n");
-  static struct polar_joints state;
-  //ser.read((uint8_t*) &state, sizeof(struct polar_joints))
-  if (ser.read((uint8_t*) &state, sizeof(struct polar_joints) ) == sizeof(struct polar_joints)){
-  joint_position_[0] = state.polar_joint1;
-  joint_position_[1] = state.polar_joint2 - joint2_offset;
-  joint_position_[2] = state.polar_joint3 - joint3_offset;
-  joint_position_[3] = state.polar_joint4;
-  joint_position_[4] = state.polar_joint5 - joint5_offset;
-  joint_position_[5] = state.polar_joint6;
-  joint_position_[6] = state.polar_hand_joint1;
+{  
+  // for(int i = 0; i < num_joints_; i++){
+  //   joint_position_[i] = encoderFeedback.position[i];
+  // } 
+  for(int i = 0; i < num_joints_; i++){
+    joint_position_[i] = joint_position_command_[i];
   }
-  
 }
 
 void PolarHWInterface::write(ros::Duration& elapsed_time)
 {
-  static struct polar_joints cmd;
   // printf("\nwrite\n");
 
   // Safety
@@ -82,17 +56,20 @@ void PolarHWInterface::write(ros::Duration& elapsed_time)
     polar_command.position[i] = joint_position_command_[i];
     polar_command.joint_names[i] = joint_names_[i];
   }
+
+  polar_command.position[6] = map(polar_command.position[6], -1.5707, 1.5707, 20, 80);
   state_pub.publish(polar_command);
 
-  // Serial write
-  cmd.polar_joint1 = joint_position_command_[0];
-  cmd.polar_joint2 = joint_position_command_[1] + joint2_offset;
-  cmd.polar_joint3 = joint_position_command_[2] + joint3_offset;
-  cmd.polar_joint4 = joint_position_command_[3];
-  cmd.polar_joint5 = joint_position_command_[4] + joint5_offset;
-  cmd.polar_joint6 = joint_position_command_[5];
-  cmd.polar_hand_joint1 = joint_position_command_[6];
-  ser.write((const uint8_t*) &cmd, sizeof(struct polar_joints));
+  // // Serial write
+  // cmd.polar_joint1 = joint_position_command_[0];
+  // cmd.polar_joint2 = joint_position_command_[1] + joint2_offset;
+  // cmd.polar_joint3 = joint_position_command_[2] + joint3_offset;
+  // cmd.polar_joint4 = joint_position_command_[3];
+  // cmd.polar_joint5 = joint_position_command_[4] + joint5_offset;
+  // cmd.polar_joint6 = joint_position_command_[5];
+  // cmd.polar_hand_joint1 = map(-joint_position_command_[6], 0, 1.0472, 34, 70);
+  // // cmd.polar_hand_joint1 = 70;
+  // ser.write((const uint8_t*) &cmd, sizeof(struct polar_joints));
 
 }
 
