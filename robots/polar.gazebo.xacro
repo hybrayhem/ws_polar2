@@ -46,11 +46,11 @@
         </gazebo>
 
         <!-- Link6 -->
-        <gazebo reference="${robot_name}_link6">
-            <material>Gazebo/White</material>
+        <!-- <gazebo reference="${robot_name}_link6">
+            <material>Gazebo/Grey</material>
             <mu1>0.2</mu1>
             <mu2>0.2</mu2>
-        </gazebo>
+        </gazebo> -->
 
     </xacro:macro>
 
