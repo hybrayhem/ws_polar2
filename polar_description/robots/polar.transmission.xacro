@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="polar_transmission" params="robot_name">
+
+        <!-- (from ur_gazebo)  -->
+        <gazebo>
+            <plugin name="ros_control" filename="libgazebo_ros_control.so"></plugin>
+        </gazebo>
+
+        <!-- Polar arm -->
+        <transmission name="${robot_name}_tran_1">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${robot_name}_joint1">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${robot_name}_motor_1">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+        <transmission name="${robot_name}_tran_2">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${robot_name}_joint2">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${robot_name}_motor_2">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+        <transmission name="${robot_name}_tran_3">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${robot_name}_joint3">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${robot_name}_motor_3">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+        <transmission name="${robot_name}_tran_4">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${robot_name}_joint4">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${robot_name}_motor_4">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+        <transmission name="${robot_name}_tran_5">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${robot_name}_joint5">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${robot_name}_motor_5">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+        <transmission name="${robot_name}_tran_6">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${robot_name}_joint6">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${robot_name}_motor_6">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+    </xacro:macro>
+</robot>
