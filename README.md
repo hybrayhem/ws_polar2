@@ -3,8 +3,7 @@ Second generation Polar Arm control software built with MoveIt by [GTU Rover](ht
 
 ![](./images/demo.png)
 
-<img src="./images/urc.gif" width="55%">
-<img src="./images/arc.jpg" width="44%">
+<img src="./images/urc.gif" width="55%"> <img src="./images/arc.jpg" width="44%">
 
 
 ### Installation
