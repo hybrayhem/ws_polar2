@@ -1,0 +1,63 @@
+PID = 17474	[2022-04-15 16:58:25.725731]	the converter has started !!
+PID = 17474	[2022-04-15 16:58:29.112018]	the converter has stoped !!
+PID = 17548	[2022-04-15 17:00:28.546512]	the converter has started !!
+PID = 17548	[2022-04-15 17:00:35.970920]	the converter has stoped !!
+PID = 17574	[2022-04-15 17:00:51.938766]	the converter has started !!
+PID = 17574	[2022-04-15 17:08:16.794656]	the converter has stoped !!
+PID = 18275	[2022-04-15 17:08:19.034370]	the converter has started !!
+PID = 18275	[2022-04-15 17:08:29.006907]	the converter has stoped !!
+PID = 18308	[2022-04-15 17:09:08.608220]	the converter has started !!
+PID = 18308	[2022-04-15 17:09:10.599986]	the converter has stoped !!
+PID = 18339	[2022-04-15 17:09:35.352045]	the converter has started !!
+PID = 18339	[2022-04-15 17:09:37.581431]	the converter has stoped !!
+PID = 18382	[2022-04-15 17:11:37.926803]	the converter has started !!
+PID = 18383	[2022-04-15 17:11:37.931984]	the encoder reader has started !! add = 
+PID = 18382	[2022-04-15 17:11:39.318197]	the converter has stoped !!
+PID = 18455	[2022-04-15 17:13:02.881089]	the converter has started !!
+PID = 18456	[2022-04-15 17:13:02.883162]	the encoder reader has started !! add = 
+PID = 18455	[2022-04-15 17:13:05.912888]	the converter has stoped !!
+PID = 18644	[2022-04-15 17:25:38.151480]	the converter has started !!
+PID = 18645	[2022-04-15 17:25:38.157201]	the encoder reader has started !! add = 
+PID = 18646	[2022-04-15 17:25:38.163692]	the motor controller has started !! add = 128
+PID = 18644	[2022-04-15 17:28:44.329966]	the converter has stoped !!
+PID = 18646	[2022-04-15 17:28:44.331723]	the motor controller has stoped !! add = 128
+PID = 18730	[2022-04-15 17:30:41.553586]	the converter has started !!
+PID = 18731	[2022-04-15 17:30:41.559753]	the encoder reader has started !! add = 
+PID = 18732	[2022-04-15 17:30:41.565008]	the motor controller has started !! add = 128
+PID = 18732	[2022-04-15 17:30:45.328199]	the motor controller has stoped !! add = 128
+PID = 18730	[2022-04-15 17:30:45.329580]	the converter has stoped !!
+PID = 18985	[2022-04-15 17:41:09.234186]	the converter has started !!
+PID = 18986	[2022-04-15 17:41:09.239842]	the encoder reader has started !! add = 
+PID = 18987	[2022-04-15 17:41:09.246329]	the motor controller has started !! add = 128
+PID = 18988	[2022-04-15 17:41:09.257216]	the motor controller has started !! add = 129
+PID = 18985	[2022-04-15 17:41:11.978848]	the converter has stoped !!
+PID = 18987	[2022-04-15 17:41:11.982752]	the motor controller has stoped !! add = 128
+PID = 18988	[2022-04-15 17:41:11.988831]	the motor controller has stoped !! add = 129
+PID = 20420	[2022-04-15 17:45:16.393830]	the converter has started !!
+PID = 20421	[2022-04-15 17:45:16.398934]	the encoder reader has started !! add = 
+PID = 20422	[2022-04-15 17:45:16.404804]	the motor controller has started !! add = 128
+PID = 20423	[2022-04-15 17:45:16.410283]	the motor controller has started !! add = 129
+PID = 20420	[2022-04-15 17:45:51.010978]	the converter has stoped !!
+PID = 20423	[2022-04-15 17:45:51.052865]	the motor controller has stoped !! add = 129
+PID = 20422	[2022-04-15 17:45:51.054378]	the motor controller has stoped !! add = 128
+PID = 20518	[2022-04-15 17:47:07.465473]	the converter has started !!
+PID = 20519	[2022-04-15 17:47:07.470956]	the encoder reader has started !! add = 
+PID = 20520	[2022-04-15 17:47:07.475356]	the motor controller has started !! add = 128
+PID = 20521	[2022-04-15 17:47:07.482282]	the motor controller has started !! add = 129
+PID = 20521	[2022-04-15 17:47:30.360890]	the motor controller has stoped !! add = 129
+PID = 20520	[2022-04-15 17:47:30.362546]	the motor controller has stoped !! add = 128
+PID = 20518	[2022-04-15 17:47:30.368468]	the converter has stoped !!
+PID = 20693	[2022-04-15 17:57:22.741897]	the converter has started !!
+PID = 20694	[2022-04-15 17:57:22.747303]	the encoder reader has started !! add = 
+PID = 20695	[2022-04-15 17:57:22.755623]	the motor controller has started !! add = 128
+PID = 20696	[2022-04-15 17:57:22.758325]	the motor controller has started !! add = 129
+PID = 20693	[2022-04-15 17:57:52.112271]	the converter has stoped !!
+PID = 20695	[2022-04-15 17:57:52.150555]	the motor controller has stoped !! add = 128
+PID = 20696	[2022-04-15 17:57:52.156582]	the motor controller has stoped !! add = 129
+PID = 20806	[2022-04-15 17:59:13.723925]	the converter has started !!
+PID = 20807	[2022-04-15 17:59:13.729077]	the encoder reader has started !! add = 
+PID = 20808	[2022-04-15 17:59:13.736858]	the motor controller has started !! add = 128
+PID = 20809	[2022-04-15 17:59:13.744846]	the motor controller has started !! add = 129
+PID = 20806	[2022-04-15 18:15:35.907483]	the converter has stoped !!
+PID = 20808	[2022-04-15 18:15:35.945706]	the motor controller has stoped !! add = 128
+PID = 20809	[2022-04-15 18:15:35.954403]	the motor controller has stoped !! add = 129

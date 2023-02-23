@@ -207,6 +207,12 @@ target_link_libraries(${PROJECT_NAME}
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-catkin_install_python(PROGRAMS  src/joint_driver_Roboclaw.py src/deneme.py src/1.py src/converter.py src/motorController.py src/servo.py
+catkin_install_python(PROGRAMS 
+  src/converter.py 
+  src/motorController.py 
+  src/encoder_read.py 
+  src/runAll.py
+  src/new.py
+  src/servo.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
