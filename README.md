@@ -1,5 +1,7 @@
 # ws_polar2
-Second generation Polar Arm control software built with MoveIt by [GTU Rover](https://rover.gtu.edu.tr). A 6-dof mobile manipulator designed for Mars missions. Includes a Gazebo simulation environment and hardware controllers to drive real robot. Competed in University Rover Challenge 2022 and Anatolian Rover Challenge 2022.
+Second generation Polar Arm control software built with MoveIt by [GTU Rover](https://rover.gtu.edu.tr). A 6-dof mobile manipulator designed for Mars missions. Includes a Gazebo simulation environment and hardware controllers to drive real robot. 
+
+Competed in University Rover Challenge 2022 and Anatolian Rover Challenge 2022.
 
 ![](./images/demo.png)
 
